@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/roll_4.png-11f3b2108fc6544d9f8ebf5b7784c429.res"
+group_file="res://Player/atlas/Player.png"
+valid=true
+[deps]
+
+
+source_file="res://Characters/Player/Sprites/roll_4.png"
+dest_files=[ "res://.import/roll_4.png-11f3b2108fc6544d9f8ebf5b7784c429.res" ]
+
+[params]
+
+atlas_file="res://Player/atlas/Player.png"
+import_mode=0
+crop_to_region=false
+trim_alpha_border_from_region=true

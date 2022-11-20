@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/idle_2.png-6ec0eec9ef4f52d9518c9078eca567e4.res"
+group_file="res://Player/atlas/Player.png"
+valid=true
+[deps]
+
+
+source_file="res://Characters/Player/Sprites/idle_2.png"
+dest_files=[ "res://.import/idle_2.png-6ec0eec9ef4f52d9518c9078eca567e4.res" ]
+
+[params]
+
+atlas_file="res://Player/atlas/Player.png"
+import_mode=0
+crop_to_region=false
+trim_alpha_border_from_region=true

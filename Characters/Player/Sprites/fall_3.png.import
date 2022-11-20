@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/fall_3.png-457022fe15cc6e71fa5435bfaf6045db.res"
+group_file="res://Player/atlas/Player.png"
+valid=true
+[deps]
+
+
+source_file="res://Characters/Player/Sprites/fall_3.png"
+dest_files=[ "res://.import/fall_3.png-457022fe15cc6e71fa5435bfaf6045db.res" ]
+
+[params]
+
+atlas_file="res://Player/atlas/Player.png"
+import_mode=0
+crop_to_region=false
+trim_alpha_border_from_region=true

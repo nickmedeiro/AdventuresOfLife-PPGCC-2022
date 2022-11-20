@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/death_2.png-b6023d0dd330bee340a1e52cf750b0a5.res"
+group_file="res://Player/atlas/Player.png"
+valid=true
+[deps]
+
+
+source_file="res://Characters/Player/Sprites/death_2.png"
+dest_files=[ "res://.import/death_2.png-b6023d0dd330bee340a1e52cf750b0a5.res" ]
+
+[params]
+
+atlas_file="res://Player/atlas/Player.png"
+import_mode=0
+crop_to_region=false
+trim_alpha_border_from_region=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/hit_2.png-2f42b980e183f18ef8ffa09a9d341d7b.res"
+group_file="res://Player/atlas/Player.png"
+valid=true
+[deps]
+
+
+source_file="res://Characters/Player/Sprites/hit_2.png"
+dest_files=[ "res://.import/hit_2.png-2f42b980e183f18ef8ffa09a9d341d7b.res" ]
+
+[params]
+
+atlas_file="res://Player/atlas/Player.png"
+import_mode=0
+crop_to_region=false
+trim_alpha_border_from_region=true
