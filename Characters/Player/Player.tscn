@@ -4,7 +4,7 @@
 [ext_resource path="res://Characters/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Bullet/Bullet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Gun/Gun.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Health.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Characters/Stats/Health.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Characters/Player/Player.tres" type="SpriteFrames" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -13,7 +13,7 @@ extents = Vector2( 12, 16 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 13, 17 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 script = ExtResource( 2 )
 Bullet = ExtResource( 3 )
 

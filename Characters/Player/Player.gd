@@ -30,17 +30,21 @@ func _physics_process(delta):
 
 	flip()
 
+	var mouse_position = get_global_mouse_position()
+	Gun.look_at(mouse_position)
+
+	# warning-ignore:return_value_discarded
 	move_and_slide(velocity)
 	
 
 func _unhandled_input(event):
 	if event.is_action_pressed("attack"):
-		Gun.shoot()
+		Gun.shoot(get_global_mouse_position())
 
 
 func flip():
 	var direction = sign(get_global_mouse_position().x - global_position.x);
-	Direction.scale.x = direction
+	Direction.scale.x = -1 if direction <= 0 else 1
 
 func on_hit():
 	Health.health -= 10

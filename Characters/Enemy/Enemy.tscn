@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Characters/Enemy/AI.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Enemy/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://Gun/Gun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/Stats/Health.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Characters/Enemy/Enemy.tres" type="SpriteFrames" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13, 17 )
+
+[sub_resource type="CircleShape2D" id=3]
+
+[node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 25 )
+shape = SubResource( 1 )
+
+[node name="Direction" type="Position2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Direction"]
+scale = Vector2( 0.055, 0.055 )
+frames = ExtResource( 5 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="Area2D" type="Area2D" parent="Direction"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/Area2D"]
+position = Vector2( 0, 25 )
+shape = SubResource( 2 )
+
+[node name="Gun" parent="Direction" instance=ExtResource( 3 )]
+position = Vector2( 3, 25 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Health" parent="." instance=ExtResource( 4 )]
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="DetectionZone" type="Area2D" parent="AI"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AI/DetectionZone"]
+position = Vector2( 0, 25 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Direction/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="AI/DetectionZone" to="AI" method="_on_DetectionZone_body_entered"]

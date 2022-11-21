@@ -1,19 +1,35 @@
 [remap]
 
-importer="texture_atlas"
-type="Texture"
-path="res://.import/fall_2.png-1c630e407e7250d7d6fe695c0f62e31e.res"
-group_file="res://Player/atlas/Player.png"
-valid=true
+importer="texture"
+type="StreamTexture"
+path="res://.import/fall_2.png-1c630e407e7250d7d6fe695c0f62e31e.stex"
+metadata={
+"vram_texture": false
+}
+
 [deps]
 
-
 source_file="res://Characters/Player/Sprites/fall_2.png"
-dest_files=[ "res://.import/fall_2.png-1c630e407e7250d7d6fe695c0f62e31e.res" ]
+dest_files=[ "res://.import/fall_2.png-1c630e407e7250d7d6fe695c0f62e31e.stex" ]
 
 [params]
 
-atlas_file="res://Player/atlas/Player.png"
-import_mode=0
-crop_to_region=false
-trim_alpha_border_from_region=true
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
