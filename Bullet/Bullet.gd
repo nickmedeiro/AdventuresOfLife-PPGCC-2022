@@ -32,4 +32,4 @@ func _on_Bullet_body_entered(body: Node):
 		return
 	
 	body.on_hit()
-	queue_free()
+	

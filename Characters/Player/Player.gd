@@ -1,11 +1,14 @@
 extends KinematicBody2D
 class_name Player
 
+signal player_hit
+
 export (PackedScene) var Bullet
 onready var Gun = $Direction/Gun
 onready var Direction = $Direction
 onready var AnimatedSprite  = $Direction/AnimatedSprite
 onready var Health  = $Health
+onready var CameraShake  = $Camera2D/CameraShake
 
 export (int) var max_speed = 200
 export (int) var friction = 500
@@ -39,7 +42,8 @@ func _physics_process(delta):
 
 func _unhandled_input(event):
 	if event.is_action_pressed("attack"):
-		Gun.shoot(get_global_mouse_position())
+		CameraShake.start(0.1, 10, 4)
+		Gun.shoot()
 
 
 func flip():
@@ -47,6 +51,7 @@ func flip():
 	Direction.scale.x = -1 if direction <= 0 else 1
 
 func on_hit():
+	CameraShake.start()
 	Health.health -= 10
 
 	if health <= 0:
